@@ -7,7 +7,7 @@ package schoolsystem;
 
 /**
  *
- * @author gta1
+ * @author Adamino
  */
 public class SchoolSystem {
 
@@ -19,8 +19,9 @@ public class SchoolSystem {
         MainMenu menu = new MainMenu();
         personTester.testPersons();
         menu.run();
-        
-        
+        personTester.getAllStudents();
+        personTester.getAllTeachers();
+
     }
-    
+
 }

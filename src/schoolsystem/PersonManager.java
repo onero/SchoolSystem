@@ -37,7 +37,6 @@ public class PersonManager {
     }
 
     public void removePerson(int id) {
-        int positionToRemove;
         if (ids.contains(id)) {
             persons.remove(ids.indexOf(id));
         } else {
@@ -53,11 +52,23 @@ public class PersonManager {
     }
 
     public List<Student> getAllStudents() {
-        return null;
+        List<Student> allStudents = new ArrayList<>();
+        for (Person person : persons) {
+            if (person.getClass().getSimpleName().equals("Student")) {
+                System.out.println(person.toString());
+            }
+        }
+        return allStudents;
     }
 
     public List<Teacher> getAllTeachers() {
-        return null;
+        List<Teacher> allTeachers = new ArrayList<>();
+        for (Person person : persons) {
+            if (person.getClass().getSimpleName().equals("Teacher")) {
+                System.out.println(person.toString());
+            }
+        }
+        return allTeachers;
     }
 
     public void operation() {
